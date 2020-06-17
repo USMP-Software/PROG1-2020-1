@@ -1,0 +1,11 @@
+<p>Esta es la vista de Buscar:</p>
+
+<form action="" method="get">
+    Buscar: <input type="text" name="q" />
+    <button type="submit">Buscar</button>
+</form>
+
+@if (ViewData["palabra"] != null) {
+    <p>Palabra a buscar: @ViewData["palabra"]</p>
+}
+
