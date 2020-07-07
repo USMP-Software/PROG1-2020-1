@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var pokemones = (List<Pokemon>)ViewData["pokemones"];
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lista de pokemones registrados</h1>
+    @foreach (var pokemon in pokemones)
+    {
+        <p>@pokemon.Nombre / @pokemon.Tipo / @pokemon.Id</p>
+    }
+</div>

@@ -1,0 +1,14 @@
+﻿@model List<Pokemon>
+
+@{
+    ViewData["Title"] = "Home Page";
+    var pokemones = Model;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lista de pokemones registrados</h1>
+    @foreach (var pokemon in pokemones)
+    {
+        <p>@pokemon.Nombre / @pokemon.Tipo</p>
+    }
+</div>
