@@ -1,0 +1,23 @@
+﻿@model List<Entrenador>
+@{
+    ViewData["Title"] = "Home Page";
+    var entrenadores = Model;
+}
+
+<form method="get">
+    Pueblo: <select name="pueblo" >
+        <option value="Pueblo Paleta">Pueblo Paleta</option>
+        <option value="Ciudad Verde">Ciudad Verde</option>
+    </select>
+    <button>Buscar</button>
+</form>
+
+<div class="text-center">
+    <h1 class="display-4">Entrenadores registrados de @Context.Request.Query["pueblo"]</h1>
+    
+    @foreach (var entrenador in entrenadores)
+    {
+        <p>@entrenador.Nombre - @entrenador.PuebloOrigen</p>        
+    }
+
+</div>
