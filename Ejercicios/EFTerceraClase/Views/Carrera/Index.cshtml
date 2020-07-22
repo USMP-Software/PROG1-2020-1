@@ -1,0 +1,10 @@
+@model List<Carrera>
+
+<h1>Listado de carreras</h1>
+
+<ul>
+    @foreach (var carrera in Model)
+    {
+        <li>@carrera.Nombre - @carrera.Facultad.Nombre</li>
+    }
+</ul>

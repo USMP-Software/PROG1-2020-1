@@ -1,0 +1,10 @@
+@model List<Facultad>
+
+<h1>Listado de facultades</h1>
+
+<ul>
+@foreach (var facultad in Model)
+{
+    <li>@facultad.Nombre / @facultad.Direccion</li>
+}
+</ul>
