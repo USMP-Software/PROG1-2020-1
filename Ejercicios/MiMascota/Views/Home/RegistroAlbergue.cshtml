@@ -1,0 +1,14 @@
+@model Albergue
+
+<h1>Formulario de registro de albergue</h1>
+
+
+<form method="post">
+
+    <div asp-validation-summary="All"></div>
+
+    <input asp-for="Nombre" />
+    <input asp-for="Direccion" />
+
+    <button>Guardar</button>
+</form>
